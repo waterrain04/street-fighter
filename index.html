@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="./style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="info">
+    <ul></a>
+      <li>Player 1 can attack using the Q key and heal using the A key. Player 2 can attack using the P key and heal using the L key.</li>
+      <li>Use attacks to reduce the opponent's health points (hp) to 0.</li>
+      <li>Use heals to restore some of your own hp.</li>
+      <li>The first player to reach 0 hp loses the game.</li>
+      <li>Have fun!</li>
+    </ul>
+    <button class="x">X</button>
+  </div>
+  <div class="how">HOW TO PLAY</div>
+  <br>
+  <div id="title">
+    <h1>STREET FIGHTER GAME</h1>
+    <p>Frogger is a classic arcade game released by Konami in 1981. The game involves guiding a frog across a busy road and river to reach its home on the other side. It became a massive success and has since become a beloved classic, inspiring numerous imitators and spin-offs, and has been referenced and parodied in popular culture..
+      <br>
+      <br>
+      Frogger's simple yet addictive gameplay, charming graphics, and catchy soundtrack made it an instant hit. It quickly became one of the most popular arcade games of the 1980s and has since been ported to numerous home consoles and computers.
+    </p>
+  </div>
+  <div id="back">BACK</div>
+  <div class="wrapper"></div>
+  <div class="menu">
+    <div class="p1Info">
+
+      <div id="p1Name">Player 1</div>
+      
+      <img 
+      id="p1" 
+      src="https://i.gifer.com/origin/00/0019f6845ceaa9347b881ccbe8f5644a_w200.gif"
+      />
+      
+      <div class="playerControls">
+
+        <div class="AttackDiv">
+          <h3>Q:</h3>
+          <button 
+            onclick = "player1.strike(player1, player2, player1.attackDmg)"  
+            id="attack"
+          >
+            Attack
+          </button>
+        </div>
+
+        <div class="HealDiv">
+          <h3>A:</h3>
+          <button 
+            onclick = "player1.heal(player1)" 
+            id="heal"
+          >
+            Heal
+          </button>
+          </div>
+      </div>
+      
+      <div  id="p1Health">100</div>
+    </div>
+
+      <button id="play">Simulate</button>
+
+    <div class="p2Info">
+
+      <div id="p2Name">Player 2</div>
+      
+      <img 
+        id="p2" 
+        src="https://i.imgur.com/Z0QCi47.gif"
+      />
+      <div class="playerControls">
+        <div class="AttackDiv">
+          <h3>P:</h3>
+          <button 
+            onclick = "player2.strike(player2, player1, player2.attackDmg)"  
+            id="attack"
+          >
+            Attack
+          </button>
+        </div>
+        <div class="HealDiv">
+          <h3>L:</h3>          
+          <button 
+            onclick = "player2.heal(player2)" 
+            id="heal"
+          >
+            Heal
+          </button>
+        </div>
+      </div>
+      
+      <div id="p2Health">100</div>
+    </div>
+
+  </div>
+  <br>
+  
+  <div class="resultContainer">
+      <div id="result"></div>
+      <button id="reset" onclick="game.reset(p1,p2)">Reset</button>
+  </div>
+
+<audio id="p1attack" controls style="display:none">
+  <source src="fastpunch.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="p1heal" controls style="display:none">
+  <source src="fastheal.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="p2attack" controls style="display:none">
+  <source src="quickhit.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="p2heal" controls style="display:none">
+  <source src="quickheal.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="victory" controls style="display:none">
+  <source src="victory.mp3" type="audio/mpeg"> 
+</audio>
+
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
